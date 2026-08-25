@@ -107,7 +107,7 @@ export default function Hero() {
               { value: '100+', label: 'Kamar' },
               { value: '9', label: 'Lantai' },
               { value: '24/7', label: 'Layanan' },
-              { value: '4★', label: 'Hotel' },
+              { value: '2★', label: 'Hotel' },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
                 <p className="text-2xl md:text-3xl font-bold text-white font-heading">{stat.value}</p>
