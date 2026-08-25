@@ -54,7 +54,7 @@ export default function Navbar() {
             className="flex items-center gap-2 group"
           >
             <div className="flex items-center gap-1">
-              {[...Array(4)].map((_, i) => (
+              {[...Array(2)].map((_, i) => (
                 <Star
                   key={i}
                   size={10}
