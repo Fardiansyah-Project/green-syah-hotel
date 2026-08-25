@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { Menu, X, Phone, Star } from 'lucide-react';
 
 const navLinks = [
@@ -17,6 +18,7 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
+
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -35,6 +37,19 @@ export default function Navbar() {
       });
     }
   };
+
+  const scrollwindowArea = (e, href) => {
+    e.preventDefault();
+    const element = document.querySelector(href);
+    if (element) {
+      const offset = 80;
+      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+        top: elementPosition - offset,
+        behavior: 'smooth',
+      });
+    }
+  }
 
   return (
     <nav
@@ -136,80 +151,83 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Drawer */}
-      <div
-        className={`lg:hidden fixed inset-0 z-40 transition-all duration-300 ${
-          isOpen ? 'visible' : 'invisible'
-        }`}
-      >
-        {/* Backdrop */}
+      {createPortal(
         <div
-          className={`absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity duration-300 ${
-            isOpen ? 'opacity-100' : 'opacity-0'
-          }`}
-          onClick={() => setIsOpen(false)}
-        />
-
-        {/* Drawer Panel */}
-        <div
-          className={`absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl transition-transform duration-300 ease-out ${
-            isOpen ? 'translate-x-0' : 'translate-x-full'
+          className={`lg:hidden fixed inset-0 z-40 transition-all duration-300 ${
+            isOpen ? 'visible' : 'invisible'
           }`}
         >
-          <div className="flex flex-col h-full">
-            {/* Drawer Header */}
-            <div className="flex items-center justify-between p-5 border-b border-slate-100">
-              <div className="flex items-center gap-2">
-                <div className="flex items-center gap-0.5">
-                  {[...Array(4)].map((_, i) => (
-                    <Star key={i} size={8} className="text-amber-500 fill-current" />
-                  ))}
+          {/* Backdrop */}
+          <div
+            className={`absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity duration-300 ${
+              isOpen ? 'opacity-100' : 'opacity-0'
+            }`}
+            onClick={() => setIsOpen(false)}
+          />
+
+          {/* Drawer Panel */}
+          <div
+            className={`absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl transition-transform duration-300 ease-out ${
+              isOpen ? 'translate-x-0' : 'translate-x-full'
+            }`}
+          >
+            <div className="flex flex-col h-full">
+              {/* Drawer Header */}
+              <div className="flex items-center justify-between p-5 border-b border-slate-100">
+                <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-0.5">
+                    {[...Array(2)].map((_, i) => (
+                      <Star key={i} size={8} className="text-amber-500 fill-current" />
+                    ))}
+                  </div>
+                  <span className="font-heading text-lg font-bold text-slate-900">Grand Sya</span>
                 </div>
-                <span className="font-heading text-lg font-bold text-slate-900">Grand Sya</span>
-              </div>
-              <button
-                onClick={() => setIsOpen(false)}
-                className="p-2 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
-              >
-                <X size={20} />
-              </button>
-            </div>
-
-            {/* Drawer Links */}
-            <div className="flex-1 overflow-y-auto py-4 px-3">
-              {navLinks.map((link, index) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={(e) => handleNavClick(e, link.href)}
-                  className="flex items-center px-4 py-3.5 rounded-xl text-slate-700 hover:text-amber-700 hover:bg-amber-50 font-medium transition-all duration-200"
-                  style={{ animationDelay: `${index * 50}ms` }}
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="p-2 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-100 transition-colors"
                 >
-                  {link.name}
-                </a>
-              ))}
-            </div>
+                  <X size={20} />
+                </button>
+              </div>
 
-            {/* Drawer Footer */}
-            <div className="p-5 border-t border-slate-100 space-y-3">
-              <a
-                href="tel:04514050065"
-                className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl border-2 border-slate-200 text-slate-600 hover:border-amber-300 hover:text-amber-700 font-medium transition-all"
-              >
-                <Phone size={16} />
-                0451-4050065
-              </a>
-              <a
-                href="https://wa.me/6285166829267?text=Halo,%20saya%20ingin%20melakukan%20reservasi%20kamar%20di%20Grand%20Sya%20Hotel%20Palu."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary w-full text-center block"
-              >
-                Pesan Kamar
-              </a>
+              {/* Drawer Links */}
+              <div className="flex-1 overflow-y-auto py-4 px-3">
+                {navLinks.map((link, index) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    onClick={(e) => handleNavClick(e, link.href)}
+                    className="flex items-center px-4 py-3.5 rounded-xl text-slate-700 hover:text-amber-700 hover:bg-amber-50 font-medium transition-all duration-200"
+                    style={{ animationDelay: `${index * 50}ms` }}
+                  >
+                    {link.name}
+                  </a>
+                ))}
+              </div>
+
+              {/* Drawer Footer */}
+              <div className="p-5 border-t border-slate-100 space-y-3">
+                <a
+                  href="tel:04514050065"
+                  className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl border-2 border-slate-200 text-slate-600 hover:border-amber-300 hover:text-amber-700 font-medium transition-all"
+                >
+                  <Phone size={16} />
+                  0451-4050065
+                </a>
+                <a
+                  href="https://wa.me/6285166829267?text=Halo,%20saya%20ingin%20melakukan%20reservasi%20kamar%20di%20Grand%20Sya%20Hotel%20Palu."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary w-full text-center block"
+                >
+                  Pesan Kamar
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        </div>,
+        document.body
+      )}
     </nav>
   );
 }
