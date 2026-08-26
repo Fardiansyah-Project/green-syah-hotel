@@ -177,12 +177,12 @@ export default function Navbar() {
               {/* Drawer Header */}
               <div className="flex items-center justify-between p-5 border-b border-slate-100">
                 <div className="flex items-center gap-2">
-                  <div className="flex items-center gap-0.5">
+                  {/* <div className="flex items-center gap-0.5">
                     {[...Array(2)].map((_, i) => (
                       <Star key={i} size={8} className="text-amber-500 fill-current" />
                     ))}
                   </div>
-                  <span className="font-heading text-lg font-bold text-slate-900">Grand Sya</span>
+                  <span className="font-heading text-lg font-bold text-slate-900">Grand Sya</span> */}
                 </div>
                 <button
                   onClick={() => setIsOpen(false)}

@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Clock, Wifi, UtensilsCrossed, Users, ShieldCheck, MapPin } from 'lucide-react';
 import heroImg from '../assets/hero-hotel.png';
-import roomDeluxe from '../assets/room-deluxe.png';
+import swimmingPool from '../assets/swimming-pool.png';
 import galleryRestaurant from '../assets/gallery-restaurant.png';
 
 const highlights = [
@@ -104,8 +104,8 @@ export default function AboutUs() {
             <div className="space-y-3 md:space-y-4 pt-6">
               <div className="rounded-2xl overflow-hidden aspect-square">
                 <img
-                  src={roomDeluxe}
-                  alt="Interior Kamar Deluxe"
+                  src={swimmingPool}
+                  alt="Swimming Pool"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -138,7 +138,7 @@ export default function AboutUs() {
             <p className="text-slate-600 leading-relaxed mb-8">
               Dilengkapi fasilitas lengkap mulai dari Cendana Ballroom berkapasitas
               1000 orang, Sya Meeting Room di lantai 9 dengan pemandangan kota,
-              hingga Nava Lounge — rooftop bar eksklusif kami. Grand Sya Hotel adalah
+              hingga Swimming Pool kami. Grand Sya Hotel adalah
               pilihan sempurna untuk perjalanan bisnis maupun liburan keluarga di Palu.
             </p>
 

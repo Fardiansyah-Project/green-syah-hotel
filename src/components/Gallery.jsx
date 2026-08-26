@@ -34,7 +34,7 @@ const galleryItems = [
   { src: roomSuite, alt: 'Junior Suite - Ruang Tamu', category: 'Kamar' },
   { src: roomSuperior, alt: 'Superior Twin Room', category: 'Kamar' },
   // { src: roomFamily, alt: 'Family Room - Spacious Living', category: 'Kamar' },
-  { src: galleryRestaurant, alt: 'Dining Experience', category: 'Restaurant' },
+  // { src: galleryRestaurant, alt: 'Dining Experience', category: 'Restaurant' },
   { src: roomDeluxe, alt: 'Room Amenities Detail', category: 'Kamar' },
   { src: roomSuite, alt: 'Suite Bathroom - Modern Design', category: 'Kamar' },
   // { src: roomFamily, alt: 'Family Living Area', category: 'Kamar' },
