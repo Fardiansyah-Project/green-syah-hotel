@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Clock, Wifi, UtensilsCrossed, Users, ShieldCheck, MapPin } from 'lucide-react';
-import heroImg from '../assets/hero-hotel.png';
+import heroImg from '../assets/hero-hotel.webp';
 import swimmingPool from '../assets/swimming-pool.png';
 import galleryRestaurant from '../assets/gallery-restaurant.png';
 

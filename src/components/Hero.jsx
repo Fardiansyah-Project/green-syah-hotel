@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { ChevronDown, Star, MapPin } from 'lucide-react';
-import heroImg from '../assets/hero-hotel.png';
+import heroImg from '../assets/hero-hotel.webp';
 
 export default function Hero() {
   return (

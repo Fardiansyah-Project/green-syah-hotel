@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { X, ZoomIn } from 'lucide-react';
 
-import heroImg from '../assets/hero-hotel.png';
+import heroImg from '../assets/hero-hotel.webp';
 import roomSuperior from '../assets/room-superior.png';
 import roomDeluxe from '../assets/room-deluxe.png';
 import roomSuite from '../assets/room-suite.png';

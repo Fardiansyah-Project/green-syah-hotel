@@ -225,7 +225,6 @@ export default function ContactMap() {
             <div className="rounded-2xl overflow-hidden shadow-lg border border-slate-200 h-full min-h-[400px] lg:min-h-[600px]">
               <iframe
                 title="Lokasi Grand Sya Hotel Palu"
-                // src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.6755!2d119.8616!3d-0.8917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d8c4eb9e0000001%3A0x4000006bb6b1c20!2sGrand+Sya+Hotel+Palu!5e0!3m2!1sid!2sid!4v1234567890"
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2412.334749944745!2d119.86986582309123!3d-0.8886039171146659!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d8bed6411a737a1%3A0xe10783dffa1d7d8f!2sGrand%20Sya%20Hotel%20Palu!5e0!3m2!1sid!2sid!4v1787743605520!5m2!1sid!2sid"
                 width="100%"
                 height="100%"
