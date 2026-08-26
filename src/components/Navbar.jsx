@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { Menu, X, Phone, Star } from 'lucide-react';
+import logoGrandSya from '../assets/logo-grand-sya.png';
 
 const navLinks = [
   { name: 'Beranda', href: '#beranda' },
@@ -69,29 +70,30 @@ export default function Navbar() {
             className="flex items-center gap-2 group"
           >
             <div className="flex items-center gap-1">
-              {[...Array(2)].map((_, i) => (
+              {/* {[...Array(4)].map((_, i) => (
                 <Star
                   key={i}
                   size={10}
                   className={`${scrolled ? 'text-amber-500' : 'text-amber-400'} fill-current transition-colors`}
                 />
-              ))}
+              ))} */}
             </div>
             <div className="flex flex-col leading-none">
-              <span
+              {/* <span
                 className={`font-heading text-xl md:text-2xl font-bold tracking-tight transition-colors ${
                   scrolled ? 'text-slate-900' : 'text-white'
                 }`}
               >
                 Grand Sya
-              </span>
-              <span
+              </span> */}
+              <img src={logoGrandSya} alt="Logo" className="h-12 md:h-20" />
+              {/* <span
                 className={`text-[10px] md:text-xs font-medium tracking-[0.2em] uppercase transition-colors ${
                   scrolled ? 'text-slate-400' : 'text-white/70'
                 }`}
               >
                 Hotel Palu
-              </span>
+              </span> */}
             </div>
           </a>
 

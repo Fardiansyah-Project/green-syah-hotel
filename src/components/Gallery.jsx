@@ -6,25 +6,41 @@ import heroImg from '../assets/hero-hotel.png';
 import roomSuperior from '../assets/room-superior.png';
 import roomDeluxe from '../assets/room-deluxe.png';
 import roomSuite from '../assets/room-suite.png';
-import roomFamily from '../assets/room-family.png';
+// import roomFamily from '../assets/room-family.png';
 import galleryRestaurant from '../assets/gallery-restaurant.png';
+import ballRoom from '../assets/ballroom.png';
+import cendanaBallroom from '../assets/cendana-ballroom.png';
+import swimmingPool from '../assets/swimming-pool.png';
+import lobbyArea from '../assets/lobby.png';
+import laungeArea from '../assets/launge.png';
+import terraceArea from '../assets/terrace-area.png';
+import syaMeetingRoom from '../assets/sya-meeting-room.png'
+import merantiMeetingRoom from '../assets/meranti-meeting-room.png'
 
 const galleryItems = [
-  { src: heroImg, alt: 'Hotel Exterior - Grand Sya Hotel Palu', category: 'Eksterior' },
+  { src: heroImg, alt: 'Hotel Night View', category: 'Eksterior' },
+  // { src: heroImg, alt: 'Hotel Exterior - Grand Sya Hotel Palu', category: 'Eksterior' },
+  { src: cendanaBallroom, alt: 'Cendana Ballroom - Entrance', category: 'Ballroom' },
+  { src: ballRoom, alt: 'Cendana Ballroom', category: 'Ballroom' },
+  { src: swimmingPool, alt: 'Swimming Pool', category: 'Eksterior' },
+  { src: laungeArea, alt: 'Launge Area', category: 'Eksterior' },
+  { src: terraceArea, alt: 'Terrace Area', category: 'Eksterior' },
+  { src: syaMeetingRoom, alt: 'SYA Meeting Room', category: 'Meeting' },
+  { src: merantiMeetingRoom, alt: 'Meranti & Palapi Meeting Room', category: 'Meeting' },
   { src: roomDeluxe, alt: 'Deluxe Room Interior', category: 'Kamar' },
   { src: galleryRestaurant, alt: 'Gallery Restaurant', category: 'Restaurant' },
+  { src: lobbyArea, alt: 'Lobby Area', category: 'Lobby' },
+  { src: heroImg, alt: 'Hotel Lobby - Grand Entrance', category: 'Lobby' },
   { src: roomSuite, alt: 'Junior Suite - Ruang Tamu', category: 'Kamar' },
   { src: roomSuperior, alt: 'Superior Twin Room', category: 'Kamar' },
-  { src: roomFamily, alt: 'Family Room - Spacious Living', category: 'Kamar' },
-  { src: heroImg, alt: 'Hotel Lobby - Grand Entrance', category: 'Lobby' },
+  // { src: roomFamily, alt: 'Family Room - Spacious Living', category: 'Kamar' },
   { src: galleryRestaurant, alt: 'Dining Experience', category: 'Restaurant' },
   { src: roomDeluxe, alt: 'Room Amenities Detail', category: 'Kamar' },
   { src: roomSuite, alt: 'Suite Bathroom - Modern Design', category: 'Kamar' },
-  { src: heroImg, alt: 'Hotel Night View', category: 'Eksterior' },
-  { src: roomFamily, alt: 'Family Living Area', category: 'Kamar' },
+  // { src: roomFamily, alt: 'Family Living Area', category: 'Kamar' },
 ];
 
-const categories = ['Semua', 'Eksterior', 'Kamar', 'Restaurant', 'Lobby'];
+const categories = ['Semua', 'Eksterior', 'Kamar', 'Restaurant', 'Lobby', 'Ballroom', 'Meeting'];
 
 export default function Gallery() {
   const [selectedCategory, setSelectedCategory] = useState('Semua');

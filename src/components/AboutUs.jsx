@@ -96,7 +96,7 @@ export default function AboutUs() {
               </div>
               <div className="rounded-2xl overflow-hidden aspect-square bg-amber-600 flex items-center justify-center p-6">
                 <div className="text-center text-white">
-                  <p className="text-4xl md:text-5xl font-heading font-bold">10+</p>
+                  <p className="text-4xl md:text-5xl font-heading font-bold">1+</p>
                   <p className="text-sm mt-1 text-white/80">Tahun Melayani</p>
                 </div>
               </div>
