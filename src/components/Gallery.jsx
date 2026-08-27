@@ -82,7 +82,7 @@ export default function Gallery() {
 
   return (
     <>
-      <section id="galeri" className="section-padding bg-stone-50" ref={ref}>
+      <section id="galeri" className="section-padding bg-white" ref={ref}>
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <motion.div

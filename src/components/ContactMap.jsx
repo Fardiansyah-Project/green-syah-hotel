@@ -59,7 +59,7 @@ export default function ContactMap() {
   };
 
   return (
-    <section id="kontak" className="section-padding bg-white" ref={ref}>
+    <section id="kontak" className="section-padding bg-stone-50" ref={ref}>
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
