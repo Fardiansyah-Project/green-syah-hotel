@@ -28,7 +28,7 @@ const rooms = [
   },
   {
     id: 2,
-    name: 'Deluxe Doble',
+    name: 'Deluxe Double',
     type: 'Deluxe',
     size: '24 m²',
     bed: '1 King Bed',
@@ -120,6 +120,110 @@ const typeBadgeColors = {
 
 function RoomCard({ room, index, onDetail }) {
   return (
+    // <motion.div
+    //   initial={{ opacity: 0, y: 30 }}
+    //   whileInView={{ opacity: 1, y: 0 }}
+    //   viewport={{ once: true, margin: '-50px' }}
+    //   transition={{ duration: 0.5, delay: index * 0.1 }}
+    //   className="card group"
+    // >
+    //   {/* Image */}
+    //   <div className="relative overflow-hidden aspect-[4/3]">
+    //     <img
+    //       src={room.image}
+    //       alt={`Kamar ${room.name} - Grand Sya Hotel Palu`}
+    //       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+    //     />
+    //     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+    //     {/* Badge */}
+    //     <span className={`absolute top-4 left-4 ${typeBadgeColors[room.type]} text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-lg`}>
+    //       {room.type}
+    //     </span>
+
+    //     {/* Promo Badge */}
+    //     {room.originalPrice > room.price && (
+    //       <span className="absolute top-4 right-4 bg-red-500 text-white text-xs font-bold px-2.5 py-1 rounded-lg shadow-lg animate-pulse">
+    //         PROMO
+    //       </span>
+    //     )}
+    //   </div>
+
+    //   {/* Content */}
+    //   <div className="p-5 md:p-6">
+    //     <div className="flex items-start justify-between mb-3">
+    //       <div>
+    //         <h3 className="font-heading text-xl font-bold text-slate-900">{room.name}</h3>
+    //         <div className="flex items-center gap-3 mt-1 text-sm text-slate-500">
+    //           <span className="flex items-center gap-1">
+    //             <Maximize2 size={13} />
+    //             {room.size}
+    //           </span>
+    //           <span className="flex items-center gap-1">
+    //             <BedDouble size={13} />
+    //             {room.bed}
+    //           </span>
+    //           <span className="flex items-center gap-1">
+    //             <Users size={13} />
+    //             {room.capacity}
+    //           </span>
+    //         </div>
+    //       </div>
+    //     </div>
+
+    //     {/* Amenities */}
+    //     <div className="flex flex-wrap gap-2 mb-4">
+    //       {room.amenities.slice(0, 5).map((amenity) => {
+    //         const Icon = amenityIcons[amenity] || Wifi;
+    //         return (
+    //           <span
+    //             key={amenity}
+    //             className="inline-flex items-center gap-1 text-xs text-slate-500 bg-slate-50 px-2.5 py-1 rounded-lg"
+    //           >
+    //             <Icon size={12} className="text-amber-500" />
+    //             {amenity}
+    //           </span>
+    //         );
+    //       })}
+    //       {room.amenities.length > 5 && (
+    //         <span className="text-xs text-amber-600 bg-amber-50 px-2.5 py-1 rounded-lg font-medium">
+    //           +{room.amenities.length - 5} lagi
+    //         </span>
+    //       )}
+    //     </div>
+
+    //     {/* Price */}
+    //     <div className="flex items-end justify-between pt-4 border-t border-slate-100">
+    //       <div>
+    //         {room.originalPrice > room.price && (
+    //           <p className="text-sm text-slate-400 line-through">
+    //             Rp {formatPrice(room.originalPrice)}
+    //           </p>
+    //         )}
+    //         <p className="text-xl font-bold text-amber-600 font-heading">
+    //           Rp {formatPrice(room.price)}
+    //           <span className="text-xs font-normal text-slate-400 ml-1">/malam</span>
+    //         </p>
+    //       </div>
+    //       <div className="flex gap-2">
+    //         <button
+    //           onClick={() => onDetail(room)}
+    //           className="text-sm font-medium text-slate-600 hover:text-amber-700 bg-slate-100 hover:bg-amber-50 px-3.5 py-2 rounded-lg transition-all"
+    //         >
+    //           Detail
+    //         </button>
+    //         <a
+    //           href={`https://wa.me/6285166829267?text=${encodeURIComponent(`Halo, saya ingin memesan kamar ${room.name} di Grand Sya Hotel Palu.\nHarga: Rp ${formatPrice(room.price)}/malam`)}`}
+    //           target="_blank"
+    //           rel="noopener noreferrer"
+    //           className="text-sm font-medium text-white bg-amber-600 hover:bg-amber-700 px-3.5 py-2 rounded-lg transition-all shadow-sm hover:shadow-md"
+    //         >
+    //           Pesan
+    //         </a>
+    //       </div>
+    //     </div>
+    //   </div>
+    // </motion.div>
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -140,13 +244,6 @@ function RoomCard({ room, index, onDetail }) {
         <span className={`absolute top-4 left-4 ${typeBadgeColors[room.type]} text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-lg`}>
           {room.type}
         </span>
-
-        {/* Promo Badge */}
-        {room.originalPrice > room.price && (
-          <span className="absolute top-4 right-4 bg-red-500 text-white text-xs font-bold px-2.5 py-1 rounded-lg shadow-lg animate-pulse">
-            PROMO
-          </span>
-        )}
       </div>
 
       {/* Content */}
@@ -193,19 +290,8 @@ function RoomCard({ room, index, onDetail }) {
         </div>
 
         {/* Price */}
-        <div className="flex items-end justify-between pt-4 border-t border-slate-100">
-          <div>
-            {room.originalPrice > room.price && (
-              <p className="text-sm text-slate-400 line-through">
-                Rp {formatPrice(room.originalPrice)}
-              </p>
-            )}
-            <p className="text-xl font-bold text-amber-600 font-heading">
-              Rp {formatPrice(room.price)}
-              <span className="text-xs font-normal text-slate-400 ml-1">/malam</span>
-            </p>
-          </div>
-          <div className="flex gap-2">
+        <div className="pt-4 border-t border-slate-100">
+          <div className="flex flex-col justify-center gap-2">
             <button
               onClick={() => onDetail(room)}
               className="text-sm font-medium text-slate-600 hover:text-amber-700 bg-slate-100 hover:bg-amber-50 px-3.5 py-2 rounded-lg transition-all"
@@ -216,7 +302,7 @@ function RoomCard({ room, index, onDetail }) {
               href={`https://wa.me/6285166829267?text=${encodeURIComponent(`Halo, saya ingin memesan kamar ${room.name} di Grand Sya Hotel Palu.\nHarga: Rp ${formatPrice(room.price)}/malam`)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-medium text-white bg-amber-600 hover:bg-amber-700 px-3.5 py-2 rounded-lg transition-all shadow-sm hover:shadow-md"
+              className="text-sm font-medium text-center text-white bg-amber-600 hover:bg-amber-700 px-3.5 py-2 rounded-lg transition-all shadow-sm hover:shadow-md"
             >
               Pesan
             </a>
@@ -357,8 +443,13 @@ export default function Rooms() {
             <span className="inline-block text-amber-600 font-semibold text-sm tracking-widest uppercase mb-3">
               Akomodasi
             </span>
-            <h2 className="section-title">
+            {/* Before */}
+            {/* <h2 className="section-title">
               Tipe Kamar & <span className="text-gradient italic">Tarif</span>
+            </h2> */}
+            {/* After */}
+            <h2 className="section-title">
+              Tipe <span className='text-gradient italic'>Kamar</span>
             </h2>
             <p className="section-subtitle mt-4">
               Pilih kamar yang sesuai dengan kebutuhan Anda. Semua kamar dilengkapi

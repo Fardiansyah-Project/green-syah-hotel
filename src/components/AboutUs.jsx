@@ -4,6 +4,7 @@ import { Clock, Wifi, UtensilsCrossed, Users, ShieldCheck, MapPin } from 'lucide
 import heroImg from '../assets/hero-hotel.webp';
 import swimmingPool from '../assets/swimming-pool.png';
 import galleryRestaurant from '../assets/gallery-restaurant.png';
+import cendanaBallroom from '../assets/cendana-ballroom.png';
 
 const highlights = [
   {
@@ -13,13 +14,13 @@ const highlights = [
   },
   {
     icon: Wifi,
-    title: 'WiFi Kencang',
+    title: 'WiFi',
     desc: 'Koneksi internet berkecepatan tinggi di seluruh area hotel.',
   },
   {
     icon: UtensilsCrossed,
-    title: 'Restoran Halal',
-    desc: 'Gallery Restaurant menyajikan menu halal yang lezat.',
+    title: 'Restaurant',
+    desc: 'Gallery Restaurant menyajikan menu yang lezat.',
   },
   {
     icon: Users,
@@ -68,7 +69,7 @@ export default function AboutUs() {
             Tentang Kami
           </span>
           <h2 className="section-title">
-            Selamat Datang di{' '}
+            Hotel{' '}
             <span className="text-gradient italic">Grand Sya</span>
           </h2>
           <p className="section-subtitle mt-4">
@@ -94,11 +95,18 @@ export default function AboutUs() {
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
-              <div className="rounded-2xl overflow-hidden aspect-square bg-amber-600 flex items-center justify-center p-6">
+              {/* <div className="rounded-2xl overflow-hidden aspect-square bg-amber-600 flex items-center justify-center p-6">
                 <div className="text-center text-white">
                   <p className="text-4xl md:text-5xl font-heading font-bold">1+</p>
                   <p className="text-sm mt-1 text-white/80">Tahun Melayani</p>
-                </div>
+                </div> 
+              </div> */}
+              <div className="rounded-2xl overflow-hidden aspect-square">
+                <img
+                  src={cendanaBallroom}
+                  alt="Grand Sya Hotel Exterior"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                />
               </div>
             </div>
             <div className="space-y-3 md:space-y-4 pt-6">

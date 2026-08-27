@@ -19,7 +19,6 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
-
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -58,7 +57,7 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
           ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-slate-100'
-          : 'bg-transparent'
+          : 'backdrop-blur-sm'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -86,7 +85,7 @@ export default function Navbar() {
               >
                 Grand Sya
               </span> */}
-              <img src={logoGrandSya} alt="Logo" className="h-12 md:h-20" />
+              <img src={logoGrandSya} alt="Logo" className="h-16 md:h-20" />
               {/* <span
                 className={`text-[10px] md:text-xs font-medium tracking-[0.2em] uppercase transition-colors ${
                   scrolled ? 'text-slate-400' : 'text-white/70'
@@ -126,8 +125,16 @@ export default function Navbar() {
               <Phone size={14} />
               <span className="hidden xl:inline">0451-4050065</span>
             </a>
-            <a
+            {/* <a
               href="https://wa.me/6285166829267?text=Halo,%20saya%20ingin%20melakukan%20reservasi%20kamar%20di%20Grand%20Sya%20Hotel%20Palu."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary !py-2.5 !px-5 !text-sm flex items-center gap-2"
+            >
+              Pesan Kamar
+            </a> */}
+            <a
+              href="https://book.digihubhospitality.com/booking-page.php?id=grand-sya-hotel"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary !py-2.5 !px-5 !text-sm flex items-center gap-2"

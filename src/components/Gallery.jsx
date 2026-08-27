@@ -19,7 +19,8 @@ import syaMeetingRoom from '../assets/sya-meeting-room.png'
 import merantiMeetingRoom from '../assets/meranti-meeting-room.png'
 
 const galleryItems = [
-  { src: heroImg, alt: 'Hotel Night View', category: 'Eksterior' },
+  { src: heroImg, alt: 'Hotel Lobby - Grand Entrance', category: 'Eksterior' },
+  // { src: heroImg, alt: 'Hotel Night View', category: 'Eksterior' },
   // { src: heroImg, alt: 'Hotel Exterior - Grand Sya Hotel Palu', category: 'Eksterior' },
   { src: cendanaBallroom, alt: 'Cendana Ballroom - Entrance', category: 'Ballroom' },
   { src: ballRoom, alt: 'Cendana Ballroom', category: 'Ballroom' },
@@ -31,7 +32,6 @@ const galleryItems = [
   { src: roomDeluxe, alt: 'Deluxe Room Interior', category: 'Kamar' },
   { src: galleryRestaurant, alt: 'Gallery Restaurant', category: 'Restaurant' },
   { src: lobbyArea, alt: 'Lobby Area', category: 'Lobby' },
-  { src: heroImg, alt: 'Hotel Lobby - Grand Entrance', category: 'Lobby' },
   { src: roomSuite, alt: 'Junior Suite - Ruang Tamu', category: 'Kamar' },
   { src: roomSuperior, alt: 'Superior Twin Room', category: 'Kamar' },
   // { src: roomFamily, alt: 'Family Room - Spacious Living', category: 'Kamar' },
