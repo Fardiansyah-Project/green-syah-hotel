@@ -5,10 +5,12 @@ import {
   BedDouble, X, ChevronLeft, ChevronRight
 } from 'lucide-react';
 
-import roomSuperior from '../assets/room-superior.png';
-import roomDeluxe from '../assets/room-deluxe.png';
-import roomSuite from '../assets/room-suite.png';
-import roomFamily from '../assets/room-family.png';
+import roomSuperior from '../assets/room-superior.webp';
+import roomDeluxe from '../assets/room-deluxe.webp';
+import roomDeluxeTwin from '../assets/room-deluxe-twin.webp';
+import roomSuite from '../assets/room-junior-suite.webp';
+import roomPresidenSuite from '../assets/room-presiden-suite.webp';
+import roomFamily from '../assets/room-family.webp';
 
 const rooms = [
   {
@@ -18,21 +20,21 @@ const rooms = [
     size: '20 m²',
     bed: '2 Single Bed',
     capacity: '2 Tamu',
-    price: 678600,
-    originalPrice: 850000,
+    price: 626400,
+    originalPrice: 720000,
     image: roomSuperior,
     amenities: ['AC', 'WiFi', 'TV', 'Sarapan', 'Hot Shower'],
     description: 'Kamar nyaman dengan dua tempat tidur single, cocok untuk perjalanan bisnis atau bersama rekan kerja. Dilengkapi fasilitas modern dan pemandangan kota.',
   },
   {
     id: 2,
-    name: 'Deluxe King',
+    name: 'Deluxe Doble',
     type: 'Deluxe',
     size: '24 m²',
     bed: '1 King Bed',
     capacity: '2 Tamu',
-    price: 780000,
-    originalPrice: 950000,
+    price: 678600,
+    originalPrice: 780000,
     image: roomDeluxe,
     amenities: ['AC', 'WiFi', 'Smart TV', 'Sarapan', 'Hot Shower'],
     description: 'Kamar deluxe dengan tempat tidur king size yang luas dan nyaman. Interior elegan dengan sentuhan modern, sempurna untuk pasangan atau tamu eksekutif.',
@@ -44,22 +46,22 @@ const rooms = [
     size: '24 m²',
     bed: '2 Single Bed',
     capacity: '2 Tamu',
-    price: 780000,
-    originalPrice: 950000,
-    image: roomDeluxe,
+    price: 704700,
+    originalPrice: 810000,
+    image: roomDeluxeTwin,
     amenities: ['AC', 'WiFi', 'Smart TV', 'Sarapan', 'Hot Shower'],
     description: 'Kamar deluxe luas dengan dua tempat tidur single. Ideal untuk tamu yang menginginkan kenyamanan ekstra dengan ruang yang lebih lega.',
   },
   {
     id: 4,
-    name: 'Grand Deluxe',
-    type: 'Grand',
-    size: '28 m²',
-    bed: '1 Double Bed',
-    capacity: '2 Tamu',
-    price: 950000,
-    originalPrice: 1200000,
-    image: roomSuite,
+    name: 'President Suites',
+    type: 'Suite',
+    size: '120 m²',
+    bed: '1 King Bed',
+    capacity: '6 Tamu',
+    price: 3567000,
+    originalPrice: 4100000,
+    image: roomPresidenSuite,
     amenities: ['AC', 'WiFi', 'Smart TV', 'Sarapan', 'Bathtub', 'Minibar'],
     description: 'Pengalaman menginap premium dengan kamar yang lebih luas dan fasilitas lengkap termasuk bathtub dan minibar. Pemandangan kota yang menakjubkan.',
   },
@@ -70,8 +72,8 @@ const rooms = [
     size: '42 m²',
     bed: '1 King Bed',
     capacity: '3 Tamu',
-    price: 1500000,
-    originalPrice: 1850000,
+    price: 1740000,
+    originalPrice: 2000000,
     image: roomSuite,
     amenities: ['AC', 'WiFi', 'Smart TV', 'Sarapan', 'Bathtub', 'Minibar', 'Living Area'],
     description: 'Suite mewah dengan area tamu terpisah dan tempat tidur king. Ruang yang luas untuk bekerja dan bersantai dengan pemandangan kota Palu yang spektakuler.',

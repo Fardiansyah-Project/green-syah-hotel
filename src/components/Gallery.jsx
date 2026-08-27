@@ -3,10 +3,11 @@ import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { X, ZoomIn } from 'lucide-react';
 
 import heroImg from '../assets/hero-hotel.webp';
-import roomSuperior from '../assets/room-superior.png';
-import roomDeluxe from '../assets/room-deluxe.png';
-import roomSuite from '../assets/room-suite.png';
-// import roomFamily from '../assets/room-family.png';
+import roomSuperior from '../assets/room-superior.webp';
+import roomDeluxe from '../assets/room-deluxe.webp';
+import roomDeluxeTwin from '../assets/room-deluxe-twin.webp';
+import roomSuite from '../assets/room-junior-suite.webp';
+import roomFamily from '../assets/room-family.webp';
 import galleryRestaurant from '../assets/gallery-restaurant.png';
 import ballRoom from '../assets/ballroom.png';
 import cendanaBallroom from '../assets/cendana-ballroom.png';
@@ -37,7 +38,7 @@ const galleryItems = [
   // { src: galleryRestaurant, alt: 'Dining Experience', category: 'Restaurant' },
   { src: roomDeluxe, alt: 'Room Amenities Detail', category: 'Kamar' },
   { src: roomSuite, alt: 'Suite Bathroom - Modern Design', category: 'Kamar' },
-  // { src: roomFamily, alt: 'Family Living Area', category: 'Kamar' },
+  { src: roomFamily, alt: 'Family Living Area', category: 'Kamar' },
 ];
 
 const categories = ['Semua', 'Eksterior', 'Kamar', 'Restaurant', 'Lobby', 'Ballroom', 'Meeting'];
