@@ -68,7 +68,7 @@ export default function MeetingEvent() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
-                className="group bg-white rounded-2xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-shadow duration-500"
+                className="group bg-white rounded-2xl overflow-hidden border border-slate-200 hover:shadow-2xl transition-shadow duration-500"
               >
                 {/* Image */}
                 <div className="relative aspect-[4/3] overflow-hidden">
