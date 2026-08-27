@@ -35,7 +35,7 @@ export default function Hero() {
                 <Star key={i} size={12} className="text-amber-400 fill-amber-400" />
               ))}
             </div>
-            <span className="text-white/90 text-sm font-medium">Hotel 4</span>
+            <span className="text-white/90 text-sm font-medium">Hotel</span>
             <span className="text-white/40">|</span>
             <div className="flex items-center gap-1">
               <MapPin size={12} className="text-white/70" />
