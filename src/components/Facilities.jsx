@@ -32,7 +32,7 @@ const facilities = [
   },
   {
     icon: Building2,
-    name: 'SYA Meeting Room',
+    name: 'Meeting Room',
     desc: 'Ruang rapat di lantai 9 dengan pemandangan kota Palu, ideal untuk MICE.',
     color: 'from-slate-500 to-slate-700',
   },

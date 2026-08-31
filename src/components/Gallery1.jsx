@@ -1,6 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
-import { X, ZoomIn, Images } from 'lucide-react';
+import { X, ZoomIn } from 'lucide-react';
 
 import heroImg from '../assets/hero-hotel.webp';
 import roomSuperior from '../assets/room-superior.webp';
@@ -43,14 +43,9 @@ const galleryItems = [
 
 const categories = ['Semua', 'Eksterior', 'Kamar', 'Restaurant', 'Lobby', 'Ballroom', 'Meeting'];
 
-// Jumlah slot yang ditampilkan sebelum kartu "Lihat Semua" muncul.
-// Slot terakhir dari angka ini dipakai untuk kartu "Lihat Semua" (bukan gambar).
-const INITIAL_VISIBLE = 10;
-
 export default function Gallery() {
   const [selectedCategory, setSelectedCategory] = useState('Semua');
   const [lightboxIndex, setLightboxIndex] = useState(null);
-  const [showAll, setShowAll] = useState(false);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -58,31 +53,20 @@ export default function Gallery() {
     ? galleryItems
     : galleryItems.filter(item => item.category === selectedCategory);
 
-  // Reset "lihat semua" setiap kali kategori berganti
-  useEffect(() => {
-    setShowAll(false);
-  }, [selectedCategory]);
-
-  const hasMore = filteredItems.length > INITIAL_VISIBLE;
-  const displayedItems = showAll || !hasMore
-    ? filteredItems
-    : filteredItems.slice(0, INITIAL_VISIBLE - 1);
-  const remainingCount = filteredItems.length - (INITIAL_VISIBLE - 1);
-
   const openLightbox = (index) => setLightboxIndex(index);
   const closeLightbox = () => setLightboxIndex(null);
   const navigateLightbox = (direction) => {
     setLightboxIndex((prev) => {
       const newIndex = prev + direction;
-      if (newIndex < 0) return displayedItems.length - 1;
-      if (newIndex >= displayedItems.length) return 0;
+      if (newIndex < 0) return filteredItems.length - 1;
+      if (newIndex >= filteredItems.length) return 0;
       return newIndex;
     });
   };
 
   return (
     <>
-      <section id="galeri" className="section-padding bg-white" ref={ref}>
+      <section id="galeri" className="section-padding bg-stone-50" ref={ref}>
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <motion.div
@@ -95,7 +79,7 @@ export default function Gallery() {
               Galeri Foto
             </span>
             <h2 className="section-title">
-              Jelajahi <span className="text-gradient italic">Galeri</span>
+              Jelajahi <span className="text-gradient italic">Grand Sya</span>
             </h2>
             <p className="section-subtitle mt-4">
               Lihat keindahan interior, fasilitas, dan suasana Grand Sya Hotel Palu
@@ -131,7 +115,7 @@ export default function Gallery() {
             className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4"
           >
             <AnimatePresence mode="popLayout">
-              {displayedItems.map((item, index) => (
+              {filteredItems.map((item, index) => (
                 <motion.div
                   key={`${item.alt}-${index}`}
                   layout
@@ -163,49 +147,8 @@ export default function Gallery() {
                   </div>
                 </motion.div>
               ))}
-
-              {/* Kartu "Lihat Semua" */}
-              {hasMore && !showAll && (
-                <motion.div
-                  key="lihat-semua-card"
-                  layout
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.4 }}
-                  className="group relative overflow-hidden rounded-xl cursor-pointer"
-                  onClick={() => setShowAll(true)}
-                >
-                  <div className="aspect-square">
-                    <img
-                      src={filteredItems[INITIAL_VISIBLE - 1]?.src}
-                      alt="Lihat semua foto"
-                      className="w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-700 blur-2xl"
-                    />
-                  </div>
-                  <div className="absolute inset-0 bg-slate-900/65 group-hover:bg-slate-900/75 transition-colors duration-300 flex flex-col items-center justify-center gap-2">
-                    <div className="bg-white/15 backdrop-blur-sm p-3 rounded-full">
-                      <Images size={22} className="text-white" />
-                    </div>
-                    <span className="text-white font-semibold text-lg leading-none">+{remainingCount}</span>
-                    <span className="text-white/90 text-sm font-medium">Lihat Semua</span>
-                  </div>
-                </motion.div>
-              )}
             </AnimatePresence>
           </motion.div>
-
-          {/* Tombol tampilkan lebih sedikit*/}
-          {showAll && hasMore && (
-            <div className="flex justify-center mt-8">
-              <button
-                onClick={() => setShowAll(false)}
-                className="mt-4 px-8 py-2 rounded-full text-sm font-medium bg-white text-slate-600 hover:bg-amber-50 hover:text-amber-700 border border-slate-200 transition-all duration-300"
-              >
-                Tampilkan Lebih Sedikit
-              </button>
-            </div>
-          )}
         </div>
       </section>
 
@@ -256,14 +199,14 @@ export default function Gallery() {
               onClick={(e) => e.stopPropagation()}
             >
               <img
-                src={displayedItems[lightboxIndex]?.src}
-                alt={displayedItems[lightboxIndex]?.alt}
+                src={filteredItems[lightboxIndex]?.src}
+                alt={filteredItems[lightboxIndex]?.alt}
                 className="w-full h-full object-contain rounded-lg"
               />
               <p className="text-white/80 text-center mt-4 text-sm">
-                {displayedItems[lightboxIndex]?.alt}
+                {filteredItems[lightboxIndex]?.alt}
                 <span className="text-white/40 ml-2">
-                  {lightboxIndex + 1} / {displayedItems.length}
+                  {lightboxIndex + 1} / {filteredItems.length}
                 </span>
               </p>
             </motion.div>

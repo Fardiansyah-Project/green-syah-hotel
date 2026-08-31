@@ -15,7 +15,7 @@ export default function BookingBar() {
   };
 
   return (
-    <div className="relative z-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-14 md:-mt-16">
+    <div className="relative z-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-14 md:-mt-12">
       <motion.form
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
