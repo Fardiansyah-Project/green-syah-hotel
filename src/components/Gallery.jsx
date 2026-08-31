@@ -95,7 +95,7 @@ export default function Gallery() {
               Galeri Foto
             </span>
             <h2 className="section-title">
-              Jelajahi <span className="text-gradient italic">Grand Sya</span>
+              Jelajahi <span className="text-gradient italic">Galeri</span>
             </h2>
             <p className="section-subtitle mt-4">
               Lihat keindahan interior, fasilitas, dan suasana Grand Sya Hotel Palu

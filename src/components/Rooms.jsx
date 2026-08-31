@@ -20,13 +20,14 @@ import roomDeluxeTwin from "../assets/room-deluxe-twin.webp";
 import roomSuite from "../assets/room-junior-suite.webp";
 import roomPresidenSuite from "../assets/room-presiden-suite.webp";
 import roomFamily from "../assets/room-family.webp";
+import grandDeluxe from "../assets/grand-deluxe.webp";
 
 const rooms = [
   {
     id: 1,
     name: "Superior Twin",
     type: "Superior",
-    size: "20 m²",
+    // size: "20 m²",
     bed: "2 Single Bed",
     capacity: "2 Tamu",
     price: 626400,
@@ -40,7 +41,7 @@ const rooms = [
     id: 2,
     name: "Deluxe Double",
     type: "Deluxe",
-    size: "24 m²",
+    // size: "24 m²",
     bed: "1 King Bed",
     capacity: "2 Tamu",
     price: 678600,
@@ -54,7 +55,7 @@ const rooms = [
     id: 3,
     name: "Deluxe Twin",
     type: "Deluxe",
-    size: "24 m²",
+    // size: "24 m²",
     bed: "2 Single Bed",
     capacity: "2 Tamu",
     price: 704700,
@@ -66,9 +67,23 @@ const rooms = [
   },
   {
     id: 4,
+    name: "Grand Deluxe",
+    type: "Deluxe",
+    // size: "24 m²",
+    bed: "1 King Bed",
+    capacity: "2 Tamu",
+    price: 704700,
+    originalPrice: 810000,
+    image: grandDeluxe,
+    amenities: ["AC", "WiFi", "Smart TV", "Sarapan", "Hot Shower"],
+    description:
+      "Kamar deluxe luas dengan dua tempat tidur single. Ideal untuk tamu yang menginginkan kenyamanan ekstra dengan ruang yang lebih lega.",
+  },
+  {
+    id: 5,
     name: "President Suites",
     type: "Suite",
-    size: "120 m²",
+    // size: "120 m²",
     bed: "1 King Bed",
     capacity: "6 Tamu",
     price: 3567000,
@@ -79,10 +94,10 @@ const rooms = [
       "Pengalaman menginap premium dengan kamar yang lebih luas dan fasilitas lengkap termasuk bathtub dan minibar. Pemandangan kota yang menakjubkan.",
   },
   {
-    id: 5,
+    id: 6,
     name: "Junior Suite",
     type: "Suite",
-    size: "42 m²",
+    // size: "42 m²",
     bed: "1 King Bed",
     capacity: "3 Tamu",
     price: 1740000,
@@ -101,10 +116,10 @@ const rooms = [
       "Suite mewah dengan area tamu terpisah dan tempat tidur king. Ruang yang luas untuk bekerja dan bersantai dengan pemandangan kota Palu yang spektakuler.",
   },
   {
-    id: 6,
+    id: 7,
     name: "Family Room",
     type: "Family",
-    size: "67 m²",
+    // size: "67 m²",
     bed: "King + Twin",
     capacity: "4 Tamu",
     price: 2000000,
@@ -313,7 +328,7 @@ function RoomCard({ room, index, onDetail }) {
                 key={amenity}
                 className="inline-flex items-center gap-1 text-xs text-slate-500 bg-slate-50 px-2.5 py-1 rounded-lg"
               >
-                <Icon size={12} className="text-amber-500" />
+                {/* <Icon size={12} className="text-amber-500" /> */}
                 {amenity}
               </span>
             );
