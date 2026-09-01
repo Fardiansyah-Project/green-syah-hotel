@@ -48,6 +48,11 @@ const contactInfo = [
 // "number" wajib format internasional tanpa + atau spasi (contoh: 62812xxxxxxx).
 const whatsappNumbers = [
   {
+    label: "Customer Service",
+    number: "6285166829267", // TODO: ganti dengan nomor WA khusus meeting & event
+    display: "+62 851-6682-9267", // TODO: ganti dengan tampilan nomor di atas
+  },
+  {
     label: "TARI",
     number: "6283841046669", // TODO: ganti dengan nomor WA khusus meeting & event
     display: "+62 838-4104-6669", // TODO: ganti dengan tampilan nomor di atas

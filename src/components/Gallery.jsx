@@ -38,7 +38,7 @@ const galleryItems = [
   // { src: galleryRestaurant, alt: 'Dining Experience', category: 'Restaurant' },
   { src: roomDeluxe, alt: 'Room Amenities Detail', category: 'Kamar' },
   { src: roomSuite, alt: 'Suite Bathroom - Modern Design', category: 'Kamar' },
-  { src: roomFamily, alt: 'Family Living Area', category: 'Kamar' },
+  // { src: roomFamily, alt: 'Family Living Area', category: 'Kamar' },
 ];
 
 const categories = ['Semua', 'Eksterior', 'Kamar', 'Restaurant', 'Lobby', 'Ballroom', 'Meeting'];
