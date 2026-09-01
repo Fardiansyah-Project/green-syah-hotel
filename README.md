@@ -1,16 +1,59 @@
-# React + Vite
+# Grand Sya Hotel
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Website profil dan reservasi Grand Sya Hotel Palu yang dibuat menggunakan React, Vite, dan Tailwind CSS.
 
-Currently, two official plugins are available:
+## Prasyarat
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Pastikan sudah terpasang:
 
-## React Compiler
+- Node.js versi 18 atau lebih baru
+- npm versi 9 atau lebih baru
+- Git
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Instalasi
 
-## Expanding the Oxlint configuration
+1. Clone repository:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+	```bash
+	git clone https://github.com/Fardiansyah-Project/green-syah-hotel.git
+	cd green-syah-hotel
+	```
+
+2. Install dependency:
+
+	```bash
+	npm install
+	```
+
+## Menjalankan Project
+
+Jalankan development server dengan perintah berikut:
+
+```bash
+npm run dev
+```
+
+Buka URL yang ditampilkan di terminal, biasanya `http://localhost:5173`.
+
+## Perintah Tersedia
+
+| Perintah | Keterangan |
+| --- | --- |
+| `npm run dev` | Menjalankan development server dengan hot reload |
+| `npm run build` | Membuat build untuk production |
+| `npm run preview` | Menjalankan preview dari hasil build |
+| `npm run lint` | Memeriksa kode menggunakan Oxlint |
+
+## Build Production
+
+Untuk membuat build production:
+
+```bash
+npm run build
+```
+
+Hasil build tersedia di folder `dist/`. Untuk melihat hasilnya secara lokal:
+
+```bash
+npm run preview
+```
