@@ -60,7 +60,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-xl md:text-3xl lg:text-4xl font-heading text-white/75  mb-8 leading-relaxed font-light"
+            className="text-l md:text-2xl lg:text-3xl font-heading text-white/75  mb-8 leading-relaxed font-light"
           >
             Local Brand with Touches of Elegance and Spirit where Heritage meets <span className="text-amber-400 italic">Modern Comfort</span> 
             <br/>Pusat Kota Palu.
