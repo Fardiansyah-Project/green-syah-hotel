@@ -144,7 +144,8 @@ export default function Facilities() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-14 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden"
+          // className="mt-14 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden"
+          className="mt-14 bg-red-800 from-slate-900 via-slate-800 to-slate-900 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden"
         >
           {/* Decorative circles */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 rounded-full -translate-y-1/2 translate-x-1/2" />
@@ -154,7 +155,7 @@ export default function Facilities() {
             <h3 className="font-heading text-2xl md:text-3xl font-bold text-white mb-3">
               Butuh Ruang untuk Event Anda?
             </h3>
-            <p className="text-slate-400 max-w-xl mx-auto mb-6 text-sm md:text-base">
+            <p className="text-slate-200 max-w-xl mx-auto mb-6 text-sm md:text-base">
               Cendana Ballroom kami siap menampung hingga 1.000 tamu undangan.
               Sempurna untuk pernikahan, seminar, dan acara korporat di Palu.
             </p>

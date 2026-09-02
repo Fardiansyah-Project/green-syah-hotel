@@ -34,7 +34,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-slate-900 text-white relative">
+    <footer className="bg-red-800 text-white relative">
       {/* Scroll to Top */}
       <button
         onClick={scrollToTop}
