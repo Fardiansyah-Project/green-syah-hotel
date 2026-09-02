@@ -2,14 +2,14 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Users, Heart, PartyPopper, ArrowRight } from "lucide-react";
 
-import merantiMeetingRoom from "../assets/meranti-meeting-room.png";
+import syaMeetingRoom from "../assets/sya-meeting-room.webp";
 import ballRoom from "../assets/ballroom.png";
-import terraceArea from "../assets/terrace-area.png";
+import terraceArea from "../assets/launge.png";
 
 const eventPackages = [
   {
     icon: Users,
-    image: merantiMeetingRoom,
+    image: syaMeetingRoom,
     title: "Meeting & Corporate",
     description:
       "Ruang meeting representatif dengan fasilitas lengkap, cocok untuk rapat, seminar, hingga pelatihan perusahaan Anda.",

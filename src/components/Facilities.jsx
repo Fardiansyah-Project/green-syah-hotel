@@ -50,8 +50,8 @@ const facilities = [
   },
   {
     icon: Wifi,
-    name: 'High-Speed WiFi',
-    desc: 'Koneksi internet kecepatan tinggi tersedia gratis di seluruh area hotel.',
+    name: 'Free WiFi',
+    desc: 'Koneksi internet tersedia gratis di seluruh area hotel.',
     color: 'from-sky-500 to-blue-600',
   },
   {
