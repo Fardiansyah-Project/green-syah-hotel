@@ -45,11 +45,14 @@ export default function MeetingEvent() {
           className="text-center mb-14"
         >
           <span className="inline-block text-amber-600 font-semibold text-sm tracking-widest uppercase mb-3">
-            Meeting & Event
+            Event Hotel
           </span>
-          <h2 className="section-title">
+          {/* <h2 className="section-title">
             Ruang Sempurna untuk{" "}
             <span className="text-gradient italic">Setiap Momen</span>
+          </h2> */}
+          <h2 className="section-title text-gradient">
+            Meeting <span className="italic"> & Event</span>
           </h2>
           <p className="section-subtitle mt-4">
             Dari rapat korporat hingga hari pernikahan, Grand Sya Hotel Palu

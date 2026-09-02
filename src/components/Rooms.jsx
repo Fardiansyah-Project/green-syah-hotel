@@ -530,7 +530,7 @@ export default function Rooms() {
             </h2> */}
             {/* After */}
             <h2 className="section-title">
-              Tipe <span className="text-gradient italic">Kamar</span>
+               <span className="text-gradient italic">Tipe Kamar</span>
             </h2>
             <p className="section-subtitle mt-4">
               Pilih kamar yang sesuai dengan kebutuhan Anda. Semua kamar

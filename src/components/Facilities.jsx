@@ -97,7 +97,7 @@ export default function Facilities() {
           <span className="inline-block text-amber-600 font-semibold text-sm tracking-widest uppercase mb-3">
             Fasilitas Hotel
           </span>
-          <h2 className="section-title">
+          <h2 className="section-title text-gradient">
             Fasilitas & <span className="text-gradient italic">Layanan</span>
           </h2>
           <p className="section-subtitle mt-4">

@@ -99,8 +99,8 @@ export default function ContactMap() {
           <span className="inline-block text-amber-600 font-semibold text-sm tracking-widest uppercase mb-3">
             Hubungi Kami
           </span>
-          <h2 className="section-title">
-            Lokasi & <span className="text-gradient italic">Kontak</span>
+          <h2 className="section-title text-gradient">
+            Lokasi & <span className="italic">Kontak</span>
           </h2>
           <p className="section-subtitle mt-4">
             Jangan ragu untuk menghubungi kami. Tim kami siap membantu
