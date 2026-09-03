@@ -68,9 +68,9 @@ export default function AboutUs() {
           <span className="inline-block text-amber-600 font-semibold text-sm tracking-widest uppercase mb-3">
             Tentang Kami
           </span>
-          <h2 className="section-title">
+          <h2 className="section-title text-gradient">
             Hotel{' '}
-            <span className="text-gradient italic">Grand Sya</span>
+            <span className="italic">Grand Sya</span>
           </h2>
           <p className="section-subtitle mt-4">
             Hotel bintang 4 di pusat Kota Palu yang menggabungkan kenyamanan modern
@@ -133,9 +133,9 @@ export default function AboutUs() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.3 }}
           >
-            <h3 className="font-heading text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+            <h3 className="font-heading text-2xl md:text-3xl font-bold text-amber-600 mb-4">
               Local Brand with Touches of{' '}
-              <span className="text-amber-600 italic">Elegance</span>
+              <span className="italic">Elegance</span>
             </h3>
             <p className="text-slate-600 leading-relaxed mb-6">
               Grand Sya Hotel Palu merupakan hotel bintang 4 yang berlokasi strategis

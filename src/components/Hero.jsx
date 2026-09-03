@@ -79,14 +79,14 @@ export default function Hero() {
       {/* Kontrol Navigasi Geser Manual (Kiri & Kanan) */}
       <button 
         onClick={handlePrev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full backdrop-blur-md border border-white/10 transition-colors"
+        className="hidden md:block absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full backdrop-blur-md border border-white/10 transition-colors"
         aria-label="Previous Slide"
       >
         <ChevronLeft size={24} />
       </button>
       <button 
         onClick={handleNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full backdrop-blur-md border border-white/10 transition-colors"
+        className="hidden md:block absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full backdrop-blur-md border border-white/10 transition-colors"
         aria-label="Next Slide"
       >
         <ChevronRight size={24} />

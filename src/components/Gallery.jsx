@@ -17,6 +17,7 @@ import laungeArea from '../assets/launge.png';
 import terraceArea from '../assets/terrace-area.png';
 import syaMeetingRoom from '../assets/sya-meeting-room.png'
 import merantiMeetingRoom from '../assets/meranti-meeting-room.png'
+import gymArea from '../assets/gym-area.webp'
 
 const galleryItems = [
   { src: heroImg, alt: 'Hotel Lobby - Grand Entrance', category: 'Eksterior' },
@@ -29,6 +30,7 @@ const galleryItems = [
   { src: terraceArea, alt: 'Terrace Area', category: 'Eksterior' },
   { src: syaMeetingRoom, alt: 'SYA Meeting Room', category: 'Meeting' },
   { src: merantiMeetingRoom, alt: 'Meranti & Palapi Meeting Room', category: 'Meeting' },
+  { src: gymArea, alt: 'Gym Area', category: 'Lainnya' },
   { src: roomDeluxe, alt: 'Deluxe Room Interior', category: 'Kamar' },
   { src: galleryRestaurant, alt: 'Gallery Restaurant', category: 'Restaurant' },
   { src: lobbyArea, alt: 'Lobby Area', category: 'Lobby' },
@@ -41,7 +43,7 @@ const galleryItems = [
   // { src: roomFamily, alt: 'Family Living Area', category: 'Kamar' },
 ];
 
-const categories = ['Semua', 'Eksterior', 'Kamar', 'Restaurant', 'Lobby', 'Ballroom', 'Meeting'];
+const categories = ['Semua', 'Eksterior', 'Kamar', 'Restaurant', 'Lobby', 'Ballroom', 'Meeting', 'Lainnya'];
 
 // Jumlah slot yang ditampilkan sebelum kartu "Lihat Semua" muncul.
 // Slot terakhir dari angka ini dipakai untuk kartu "Lihat Semua" (bukan gambar).
@@ -95,7 +97,8 @@ export default function Gallery() {
               Galeri Foto
             </span>
             <h2 className="section-title text-gradient ">
-              Jelajahi <span className="italic">Galeri</span>
+              Jelajahi {" "}
+              <span className="italic">Galeri</span>
             </h2>
             <p className="section-subtitle mt-4">
               Lihat keindahan interior, fasilitas, dan suasana Grand Sya Hotel Palu
