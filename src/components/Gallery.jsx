@@ -12,7 +12,7 @@ import galleryRestaurant from '../assets/gallery-restaurant.png';
 import ballRoom from '../assets/ballroom.png';
 import cendanaBallroom from '../assets/cendana-ballroom.png';
 import swimmingPool from '../assets/swimming-pool.png';
-import lobbyArea from '../assets/lobby.png';
+import lobbyArea from '../assets/lobby.webp';
 import laungeArea from '../assets/launge.png';
 import terraceArea from '../assets/terrace-area.png';
 import syaMeetingRoom from '../assets/sya-meeting-room.png'

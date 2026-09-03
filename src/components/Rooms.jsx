@@ -95,8 +95,8 @@ const rooms = [
       "Smart TV",
       "Sarapan",
       "Bathtub",
-      "Minibar",
-      "Living Area",
+      // "Minibar",
+      // "Living Area",
     ],
     description:
       "Suite mewah dengan area tamu terpisah dan tempat tidur king. Ruang yang luas untuk bekerja dan bersantai dengan pemandangan kota Palu yang spektakuler.",
@@ -111,7 +111,7 @@ const rooms = [
     price: 3567000,
     originalPrice: 4100000,
     image: roomPresidenSuite,
-    amenities: ["AC", "WiFi", "Smart TV", "Sarapan", "Bathtub", "Minibar"],
+    amenities: ["AC", "WiFi", "Smart TV", "Sarapan", "Bathtub"],
     description:
       "Pengalaman menginap premium dengan kamar yang lebih luas dan fasilitas lengkap termasuk bathtub dan minibar. Pemandangan kota yang menakjubkan.",
   },
@@ -167,110 +167,6 @@ const typeBadgeColors = {
 
 function RoomCard({ room, index, onDetail }) {
   return (
-    // <motion.div
-    //   initial={{ opacity: 0, y: 30 }}
-    //   whileInView={{ opacity: 1, y: 0 }}
-    //   viewport={{ once: true, margin: '-50px' }}
-    //   transition={{ duration: 0.5, delay: index * 0.1 }}
-    //   className="card group"
-    // >
-    //   {/* Image */}
-    //   <div className="relative overflow-hidden aspect-[4/3]">
-    //     <img
-    //       src={room.image}
-    //       alt={`Kamar ${room.name} - Grand Sya Hotel Palu`}
-    //       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-    //     />
-    //     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-    //     {/* Badge */}
-    //     <span className={`absolute top-4 left-4 ${typeBadgeColors[room.type]} text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-lg`}>
-    //       {room.type}
-    //     </span>
-
-    //     {/* Promo Badge */}
-    //     {room.originalPrice > room.price && (
-    //       <span className="absolute top-4 right-4 bg-red-500 text-white text-xs font-bold px-2.5 py-1 rounded-lg shadow-lg animate-pulse">
-    //         PROMO
-    //       </span>
-    //     )}
-    //   </div>
-
-    //   {/* Content */}
-    //   <div className="p-5 md:p-6">
-    //     <div className="flex items-start justify-between mb-3">
-    //       <div>
-    //         <h3 className="font-heading text-xl font-bold text-slate-900">{room.name}</h3>
-    //         <div className="flex items-center gap-3 mt-1 text-sm text-slate-500">
-    //           <span className="flex items-center gap-1">
-    //             <Maximize2 size={13} />
-    //             {room.size}
-    //           </span>
-    //           <span className="flex items-center gap-1">
-    //             <BedDouble size={13} />
-    //             {room.bed}
-    //           </span>
-    //           <span className="flex items-center gap-1">
-    //             <Users size={13} />
-    //             {room.capacity}
-    //           </span>
-    //         </div>
-    //       </div>
-    //     </div>
-
-    //     {/* Amenities */}
-    //     <div className="flex flex-wrap gap-2 mb-4">
-    //       {room.amenities.slice(0, 5).map((amenity) => {
-    //         const Icon = amenityIcons[amenity] || Wifi;
-    //         return (
-    //           <span
-    //             key={amenity}
-    //             className="inline-flex items-center gap-1 text-xs text-slate-500 bg-slate-50 px-2.5 py-1 rounded-lg"
-    //           >
-    //             <Icon size={12} className="text-amber-500" />
-    //             {amenity}
-    //           </span>
-    //         );
-    //       })}
-    //       {room.amenities.length > 5 && (
-    //         <span className="text-xs text-amber-600 bg-amber-50 px-2.5 py-1 rounded-lg font-medium">
-    //           +{room.amenities.length - 5} lagi
-    //         </span>
-    //       )}
-    //     </div>
-
-    //     {/* Price */}
-    //     <div className="flex items-end justify-between pt-4 border-t border-slate-100">
-    //       <div>
-    //         {room.originalPrice > room.price && (
-    //           <p className="text-sm text-slate-400 line-through">
-    //             Rp {formatPrice(room.originalPrice)}
-    //           </p>
-    //         )}
-    //         <p className="text-xl font-bold text-amber-600 font-heading">
-    //           Rp {formatPrice(room.price)}
-    //           <span className="text-xs font-normal text-slate-400 ml-1">/malam</span>
-    //         </p>
-    //       </div>
-    //       <div className="flex gap-2">
-    //         <button
-    //           onClick={() => onDetail(room)}
-    //           className="text-sm font-medium text-slate-600 hover:text-amber-700 bg-slate-100 hover:bg-amber-50 px-3.5 py-2 rounded-lg transition-all"
-    //         >
-    //           Detail
-    //         </button>
-    //         <a
-    //           href={`https://wa.me/6285166829267?text=${encodeURIComponent(`Halo, saya ingin memesan kamar ${room.name} di Grand Sya Hotel Palu.\nHarga: Rp ${formatPrice(room.price)}/malam`)}`}
-    //           target="_blank"
-    //           rel="noopener noreferrer"
-    //           className="text-sm font-medium text-white bg-amber-600 hover:bg-amber-700 px-3.5 py-2 rounded-lg transition-all shadow-sm hover:shadow-md"
-    //         >
-    //           Pesan
-    //         </a>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </motion.div>
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}

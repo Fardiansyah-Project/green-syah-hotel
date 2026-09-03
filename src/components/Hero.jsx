@@ -1,24 +1,96 @@
-import { motion } from 'framer-motion';
-import { ChevronDown, Star, MapPin } from 'lucide-react';
-import heroImg from '../assets/hero-hotel.webp';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronDown, Star, MapPin, ChevronLeft, ChevronRight } from 'lucide-react';
+import heroImg1 from '../assets/hero-hotel.webp';
+import heroImg2 from '../assets/lobby.webp'; // Diubah variabelnya agar tidak bentrok
+import heroImg3 from '../assets/hero-image-deluxe.webp'
+
+// Daftarkan semua gambar background ke dalam sebuah array
+const BACKGROUND_IMAGES = [heroImg1, heroImg2, heroImg3];
 
 export default function Hero() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState(0); // 1 untuk kanan, -1 untuk kiri
+
+  // Efek auto-play berganti sendiri setiap 5 detik
+  useEffect(() => {
+    const timer = setInterval(() => {
+      handleNext();
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [currentIndex]);
+
+  const handleNext = () => {
+    setDirection(1);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % BACKGROUND_IMAGES.length);
+  };
+
+  const handlePrev = () => {
+    setDirection(-1);
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + BACKGROUND_IMAGES.length) % BACKGROUND_IMAGES.length);
+  };
+
+  // Varian animasi untuk transisi gambar
+  const slideVariants = {
+    enter: (dir) => ({
+      x: dir > 0 ? '100%' : '-100%',
+      opacity: 0,
+    }),
+    center: {
+      x: 0,
+      opacity: 1,
+    },
+    exit: (dir) => ({
+      x: dir < 0 ? '100%' : '-100%',
+      opacity: 0,
+    }),
+  };
+
   return (
-    <section id="beranda" className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <img
-          src={heroImg}
-          alt="Grand Sya Hotel Palu - Exterior View"
-          className="w-full h-full object-cover"
-        />
+    <section id="beranda" className="relative min-h-screen flex items-center overflow-hidden bg-slate-900">
+      {/* Background Image Slider */}
+      <div className="absolute inset-0 z-0">
+        <AnimatePresence initial={false} custom={direction}>
+          <motion.img
+            key={currentIndex}
+            src={BACKGROUND_IMAGES[currentIndex]}
+            custom={direction}
+            variants={slideVariants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            transition={{
+              x: { type: "spring", stiffness: 300, damping: 30 },
+              opacity: { duration: 0.5 }
+            }}
+            alt={`Grand Sya Hotel Palu - Slide ${currentIndex + 1}`}
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </AnimatePresence>
+
         {/* Gradient Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-slate-900/20" />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-slate-900/20 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/50 to-transparent z-10" />
       </div>
 
       {/* Decorative Elements */}
-      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-slate-900/30 to-transparent" />
+      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-slate-900/30 to-transparent z-10" />
+
+      {/* Kontrol Navigasi Geser Manual (Kiri & Kanan) */}
+      <button 
+        onClick={handlePrev}
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full backdrop-blur-md border border-white/10 transition-colors"
+        aria-label="Previous Slide"
+      >
+        <ChevronLeft size={24} />
+      </button>
+      <button 
+        onClick={handleNext}
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/10 hover:bg-white/20 text-white p-2 rounded-full backdrop-blur-md border border-white/10 transition-colors"
+        aria-label="Next Slide"
+      >
+        <ChevronRight size={24} />
+      </button>
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-32 md:pt-32 md:pb-40 w-full">
@@ -43,24 +115,12 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Main Heading */}
-          {/* <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.4 }}
-            className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-6"
-          >
-            Kenyamanan Modern &{' '}
-            <span className="text-amber-400 italic">Kehangatan</span>{' '}
-            Layanan
-          </motion.h1> */}
-
           {/* Subheading */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-l md:text-2xl lg:text-3xl font-heading text-white/75  mb-8 leading-relaxed font-light"
+            className="text-xl md:text-2xl lg:text-3xl font-heading text-white/75 mb-8 leading-relaxed font-light"
           >
             Local Brand with Touches of Elegance and Spirit where Heritage meets <span className="text-amber-400 italic">Modern Comfort</span> 
             <br/>Pusat Kota Palu.
@@ -96,26 +156,6 @@ export default function Hero() {
               Lihat Kamar
             </a>
           </motion.div>
-
-          {/* Stats */}
-          {/* <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
-            className="flex flex-wrap gap-6 md:gap-10 mt-12 pt-8 border-t border-white/15"
-          >
-            {[
-              { value: '100+', label: 'Kamar' },
-              { value: '9', label: 'Lantai' },
-              { value: '24/7', label: 'Layanan' },
-              { value: '4★', label: 'Hotel' },
-            ].map((stat) => (
-              <div key={stat.label} className="text-center">
-                <p className="text-2xl md:text-3xl font-bold text-white font-heading">{stat.value}</p>
-                <p className="text-sm text-white/50 mt-1">{stat.label}</p>
-              </div>
-            ))}
-          </motion.div> */}
         </div>
       </div>
 
