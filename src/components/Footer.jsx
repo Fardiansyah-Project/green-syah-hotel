@@ -56,12 +56,12 @@ export default function Footer() {
               </div>
               <div className="flex flex-col leading-none">
                 <span className="font-heading text-xl font-bold">Grand Sya</span>
-                <span className="text-[10px] text-slate-500 tracking-[0.2em] uppercase">
+                <span className="text-[10px] text-slate-400 tracking-[0.2em] uppercase">
                   Hotel Palu
                 </span>
               </div>
             </div>
-            <p className="text-slate-400 text-sm leading-relaxed mb-4">
+            <p className="text-slate-200 text-sm leading-relaxed mb-4">
               Hotel bintang 4 di pusat Kota Palu yang menggabungkan kenyamanan
               modern dengan kehangatan layanan khas Indonesia. Local Brand with
               Touches of Elegance.
@@ -120,7 +120,7 @@ export default function Footer() {
                   <a
                     href={link.href}
                     onClick={(e) => handleNavClick(e, link.href)}
-                    className="text-slate-400 hover:text-amber-400 text-sm transition-colors duration-200 hover:pl-1 inline-block"
+                    className="text-slate-200 hover:text-amber-400 text-sm transition-colors duration-200 hover:pl-1 inline-block"
                   >
                     {link.name}
                   </a>
@@ -135,7 +135,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {services.map((service) => (
                 <li key={service}>
-                  <span className="text-slate-400 text-sm">{service}</span>
+                  <span className="text-slate-200 text-sm">{service}</span>
                 </li>
               ))}
             </ul>
@@ -150,7 +150,7 @@ export default function Footer() {
                   href="https://maps.google.com/?q=Grand+Sya+Hotel+Palu"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-2 text-slate-400 hover:text-amber-400 text-sm transition-colors group"
+                  className="flex items-start gap-2 text-slate-200 hover:text-amber-400 text-sm transition-colors group"
                 >
                   <MapPin size={15} className="flex-shrink-0 mt-0.5 group-hover:text-amber-400" />
                   <span>Jl. Cik Ditiro No 11, Besusu Timur, Palu, Sulawesi Tengah</span>
@@ -159,7 +159,7 @@ export default function Footer() {
               <li>
                 <a
                   href="tel:04514050065"
-                  className="flex items-center gap-2 text-slate-400 hover:text-amber-400 text-sm transition-colors"
+                  className="flex items-center gap-2 text-slate-200 hover:text-amber-400 text-sm transition-colors"
                 >
                   <Phone size={15} />
                   0451-4050065
@@ -168,7 +168,7 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:reservation@grandsyahotelpalu.com"
-                  className="flex items-center gap-2 text-slate-400 hover:text-amber-400 text-sm transition-colors break-all"
+                  className="flex items-center gap-2 text-slate-200 hover:text-amber-400 text-sm transition-colors break-all"
                 >
                   <Mail size={15} className="flex-shrink-0" />
                   reservation@grandsyahotelpalu.com
@@ -180,15 +180,15 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="border-t border-slate-800 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-slate-500 text-xs text-center md:text-left">
+          <p className="text-slate-400 text-xs text-center md:text-left">
             &copy; {new Date().getFullYear()} Grand Sya Hotel Palu. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
-            <a href="#" className="text-slate-500 hover:text-slate-300 text-xs transition-colors">
+            <a href="#" className="text-slate-400 hover:text-slate-300 text-xs transition-colors">
               Kebijakan Privasi
             </a>
             <span className="text-slate-700">|</span>
-            <a href="#" className="text-slate-500 hover:text-slate-300 text-xs transition-colors">
+            <a href="#" className="text-slate-400 hover:text-slate-300 text-xs transition-colors">
               Syarat & Ketentuan
             </a>
           </div>
