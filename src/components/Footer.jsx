@@ -102,7 +102,7 @@ export default function Footer() {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-lg bg-slate-800 hover:bg-amber-600 text-slate-400 hover:text-white flex items-center justify-center transition-all duration-300"
+                  className="w-9 h-9 rounded-lg bg-slate-200 hover:bg-amber-600 text-slate-900 hover:text-white flex items-center justify-center transition-all duration-300"
                   title={social.name}
                 >
                   {social.svg}
