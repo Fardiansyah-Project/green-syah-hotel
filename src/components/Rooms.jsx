@@ -77,7 +77,7 @@ const rooms = [
     image: grandDeluxe,
     amenities: ["AC", "WiFi", "TV", "Sarapan", "Hot Shower"],
     description:
-      "Kamar deluxe luas dengan dua tempat tidur king size. Ideal untuk tamu yang menginginkan kenyamanan ekstra dengan ruang yang lebih lega.",
+      "Kamar deluxe luas dengan satu tempat tidur king size. Ideal untuk tamu yang menginginkan kenyamanan ekstra dengan ruang yang lebih lega.",
   },
   {
     id: 5,
