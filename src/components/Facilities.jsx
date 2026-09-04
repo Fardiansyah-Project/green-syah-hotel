@@ -20,8 +20,8 @@ const facilities = [
   },
   {
     icon: Dumbbell,
-    name: 'Fitness Center',
-    desc: 'Pusat kebugaran dengan peralatan modern untuk menjaga rutinitas olahraga Anda.',
+    name: 'SPA & Fitness Center',
+    desc: 'layanan spa eksklusif untuk menjaga kebugaran sekaligus memulihkan energi Anda dan ​Pusat kebugaran dengan peralatan modern.',
     color: 'from-emerald-500 to-teal-600',
   },
   {
@@ -54,12 +54,12 @@ const facilities = [
     desc: 'Koneksi internet tersedia gratis di seluruh area hotel.',
     color: 'from-sky-500 to-blue-600',
   },
-  {
-    icon: BellRing,
-    name: '24-Hour Service',
-    desc: 'Layanan kamar dan resepsionis tersedia sepanjang waktu untuk kenyamanan Anda.',
-    color: 'from-amber-600 to-yellow-600',
-  },
+  // {
+  //   icon: BellRing,
+  //   name: '24-Hour Service',
+  //   desc: 'Layanan kamar dan resepsionis tersedia sepanjang waktu untuk kenyamanan Anda.',
+  //   color: 'from-amber-600 to-yellow-600',
+  // },
   {
     icon: Sparkles,
     name: 'Laundry Service',
