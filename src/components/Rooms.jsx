@@ -302,11 +302,11 @@ function RoomDetailModal({ room, onClose }) {
               >
                 {room.type}
               </span>
-              {room.originalPrice > room.price && (
+              {/* {room.originalPrice > room.price && (
                 <span className="bg-red-100 text-red-600 text-xs font-bold px-2 py-1 rounded-lg">
                   Hemat Rp {formatPrice(room.originalPrice - room.price)}
                 </span>
-              )}
+              )} */}
             </div>
 
             <h3 className="font-heading text-2xl md:text-3xl font-bold text-slate-900 mb-2">
@@ -349,17 +349,17 @@ function RoomDetailModal({ room, onClose }) {
 
             <div className="flex items-end justify-between pt-4 border-t border-slate-100">
               <div>
-                {room.originalPrice > room.price && (
+                {/* {room.originalPrice > room.price && (
                   <p className="text-sm text-slate-400 line-through">
                     Rp {formatPrice(room.originalPrice)}
                   </p>
-                )}
-                <p className="text-2xl font-bold text-amber-600 font-heading">
+                )} */}
+                {/* <p className="text-2xl font-bold text-amber-600 font-heading">
                   Rp {formatPrice(room.price)}
                   <span className="text-sm font-normal text-slate-400 ml-1">
                     /malam
                   </span>
-                </p>
+                </p> */}
               </div>
               <a
                 href={`https://wa.me/6285166829267?text=${encodeURIComponent(`Halo, saya ingin memesan kamar ${room.name} di Grand Sya Hotel Palu.\nHarga: Rp ${formatPrice(room.price)}/malam`)}`}

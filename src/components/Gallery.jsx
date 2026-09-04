@@ -83,7 +83,7 @@ export default function Gallery() {
   };
 
   const hiddenClick = (idTarget) => {
-    const hiddenGallery = document.getElementById(idTarget || 'hidden_galerry');
+    const hiddenGallery = document.getElementById(idTarget);
     if (hiddenGallery) {
       hiddenGallery.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
