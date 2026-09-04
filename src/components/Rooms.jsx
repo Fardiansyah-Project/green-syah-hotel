@@ -96,6 +96,7 @@ const rooms = [
       "Smart TV",
       "Sarapan",
       "Bathtub",
+      'Balkoni',
       // "Minibar",
       // "Living Area",
     ],
@@ -112,9 +113,9 @@ const rooms = [
     price: 3567000,
     originalPrice: 4100000,
     image: roomPresidenSuite,
-    amenities: ["AC", "WiFi", "Smart TV", "Sarapan", "Bathtub"],
+    amenities: ["AC", "WiFi", "Smart TV", "Sarapan", "Bathtub", "Balkoni"],
     description:
-      "Pengalaman menginap premium dengan kamar yang lebih luas dan fasilitas lengkap termasuk bathtub dan minibar. Pemandangan kota yang menakjubkan.",
+      "Pengalaman menginap premium dengan kamar yang lebih luas dan fasilitas lengkap termasuk bathtub dan balkoni. Pemandangan kota yang menakjubkan.",
   },
 ];
 
@@ -127,8 +128,10 @@ const amenityIcons = {
   "Hot Shower": Droplets,
   Bathtub: Droplets,
   Minibar: Coffee,
-  "Living Area": Maximize2,
+  // "Living Area": Maximize2,
   Kitchenette: Coffee,
+  "Balkoni": Maximize2,
+
 };
 
 const formatPrice = (price) => {
@@ -208,9 +211,12 @@ function RoomCard({ room, index, onDetail }) {
             );
           })}
           {room.amenities.length > 5 && (
-            <span className="text-xs text-amber-600 bg-amber-50 px-2.5 py-1 rounded-lg font-medium">
-              +{room.amenities.length - 5} lagi
+            <span className="text-xs md:text-[10px] text-amber-600 bg-amber-50 px-2.5 py-1 rounded-lg font-medium">
+              +{room.amenities.length - 5}
             </span>
+            // <span className="text-xs text-amber-600 bg-amber-50 px-2.5 py-1 rounded-lg font-medium">
+            //   ..
+            // </span>
           )}
         </div>
 
