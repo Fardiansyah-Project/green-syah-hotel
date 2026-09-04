@@ -101,7 +101,7 @@ export default function Gallery() {
             className="text-center mb-10"
           >
             <span className="inline-block text-amber-600 font-semibold text-sm tracking-widest uppercase mb-3">
-              Galeri Foto
+              Jelajahi Foto
             </span>
             <h2 className="section-title text-gradient ">
               {/* Jelajahi {" "} */}
