@@ -174,7 +174,7 @@ export default function Hero() {
           }}
           className="flex flex-col items-center gap-2 text-white/50 hover:text-white/80 transition-colors"
         >
-          <span className="text-xs font-medium tracking-widest uppercase">Jelajahi</span>
+          {/* <span className="text-xs font-medium tracking-widest uppercase">Jelajahi</span> */}
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ repeat: Infinity, duration: 1.5, ease: 'easeInOut' }}

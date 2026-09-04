@@ -69,8 +69,8 @@ export default function AboutUs() {
             Tentang Kami
           </span>
           <h2 className="section-title text-gradient">
-            Hotel{' '}
             <span className="italic">Grand Sya</span>
+            {' '}Hotel
           </h2>
           <p className="section-subtitle mt-4">
             Hotel bintang 4 di pusat Kota Palu yang menggabungkan kenyamanan modern
@@ -154,7 +154,7 @@ export default function AboutUs() {
             <div className="bg-gradient-to-br from-amber-50 to-stone-50 rounded-2xl p-6 border border-amber-100">
               <h4 className="font-heading text-lg font-bold text-slate-900 mb-2">Visi Kami</h4>
               <p className="text-slate-600 text-sm leading-relaxed italic">
-                "Menjadikan Grand Sya Hotel sebagai hotel terbaik pilihan tamu dari berbagai daerah dan 
+                "Menjadikan Grand Sya Hotel sebagai hotel terbaik pilihan tamu dari berbagai daerah dan
                 mancanegara melalui pengalaman menginap yang mengesankan, elegan, dan penuh kehangatan."
               </p>
             </div>

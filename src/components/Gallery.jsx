@@ -29,7 +29,7 @@ const galleryItems = [
   { src: laungeArea, alt: 'Launge Area', category: 'Eksterior' },
   { src: terraceArea, alt: 'Terrace Area', category: 'Eksterior' },
   { src: syaMeetingRoom, alt: 'SYA Meeting Room', category: 'Meeting' },
-  { src: merantiMeetingRoom, alt: 'Meranti & Palapi Meeting Room', category: 'Meeting' },
+  // { src: merantiMeetingRoom, alt: 'Meranti & Palapi Meeting Room', category: 'Meeting' },
   { src: gymArea, alt: 'Gym Area', category: 'Lainnya' },
   { src: roomDeluxe, alt: 'Deluxe Room Interior', category: 'Kamar' },
   { src: galleryRestaurant, alt: 'Gallery Restaurant', category: 'Restaurant' },
@@ -97,7 +97,7 @@ export default function Gallery() {
               Galeri Foto
             </span>
             <h2 className="section-title text-gradient ">
-              Jelajahi {" "}
+              {/* Jelajahi {" "} */}
               <span className="italic">Galeri</span>
             </h2>
             <p className="section-subtitle mt-4">

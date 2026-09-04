@@ -51,9 +51,9 @@ export default function MeetingEvent() {
             Ruang Sempurna untuk{" "}
             <span className="text-gradient italic">Setiap Momen</span>
           </h2> */}
-          <h2 className="section-title text-gradient">
+          {/* <h2 className="section-title text-gradient">
             Meeting <span className="italic"> & Event</span>
-          </h2>
+          </h2> */}
           <p className="section-subtitle mt-4">
             Dari rapat korporat hingga hari pernikahan, Grand Sya Hotel Palu
             menghadirkan ruang dan layanan yang disesuaikan untuk membuat acara

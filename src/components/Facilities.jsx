@@ -94,9 +94,9 @@ export default function Facilities() {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <span className="inline-block text-amber-600 font-semibold text-sm tracking-widest uppercase mb-3">
+          {/* <span className="inline-block text-amber-600 font-semibold text-sm tracking-widest uppercase mb-3">
             Fasilitas Hotel
-          </span>
+          </span> */}
           <h2 className="section-title text-gradient">
             Fasilitas & <span className="text-gradient italic">Layanan</span>
           </h2>
@@ -145,7 +145,7 @@ export default function Facilities() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
           // className="mt-14 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden"
-          className="mt-14 bg-red-800 from-slate-900 via-slate-800 to-slate-900 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden"
+          className="mt-14 bg-red-900 from-slate-900 via-slate-800 to-slate-900 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden"
         >
           {/* Decorative circles */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 rounded-full -translate-y-1/2 translate-x-1/2" />

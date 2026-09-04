@@ -48,7 +48,7 @@ const contactInfo = [
 // "number" wajib format internasional tanpa + atau spasi (contoh: 62812xxxxxxx).
 const whatsappNumbers = [
   {
-    label: "CS",
+    label: "RSVP",
     number: "6285166829267", // TODO: ganti dengan nomor WA khusus meeting & event
     display: "+62 851-6682-9267", // TODO: ganti dengan tampilan nomor di atas
   },
@@ -142,7 +142,7 @@ export default function ContactMap() {
                     <Icon size={18} />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-0.5">
+                    <p className="text-xs font-semibold text-slate-400 font-bold uppercase tracking-wider mb-0.5">
                       {info.label}
                     </p>
                     <p className="text-sm text-slate-700 whitespace-pre-line leading-relaxed">
@@ -299,7 +299,7 @@ export default function ContactMap() {
                     onChange={(e) =>
                       setFormData({ ...formData, name: e.target.value })
                     }
-                    className="w-full bg-white border border-slate-200 rounded-xl pl-10 pr-4 py-2.5 text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500 transition-all"
+                    className="w-full bg-white border border-slate-200  rounded-xl pl-10 pr-4 py-2.5 text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-amber-500/50 focus:border-amber-500 transition-all"
                     required
                   />
                 </div>

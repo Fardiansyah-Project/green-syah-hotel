@@ -224,7 +224,7 @@ export default function Navbar() {
                   0451-4050065
                 </a>
                 <a
-                  href="https://wa.me/6285166829267?text=Halo,%20saya%20ingin%20melakukan%20reservasi%20kamar%20di%20Grand%20Sya%20Hotel%20Palu."
+                  href="https://book.digihubhospitality.com/booking-page.php?id=grand-sya-hotel"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary w-full text-center block"
