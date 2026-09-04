@@ -362,7 +362,7 @@ function RoomDetailModal({ room, onClose }) {
               <div className="flex flex-col md:flex-row items-center gap-3">
                 <button
                   onClick={() => onClose()}
-                  className="btn-secondary flex items-center gap-2"
+                  className="btn-secondary flex items-center gap-2 w-full md:w-auto justify-center"
                 >
                   kembali
                 </button>
