@@ -22,13 +22,12 @@ import roomPresidenSuite from "../assets/room-presiden-suite.webp";
 import roomFamily from "../assets/room-family.webp";
 import grandDeluxe from "../assets/grand-deluxe.webp";
 
-
 const rooms = [
   {
     id: 1,
     name: "Superior Twin",
     type: "Superior",
-    // size: "20 m²",
+    size: "26 m²",
     bed: "2 Single Bed",
     capacity: "2 Tamu",
     price: 626400,
@@ -42,7 +41,7 @@ const rooms = [
     id: 2,
     name: "Deluxe Double",
     type: "Deluxe",
-    // size: "24 m²",
+    size: "32 m²",
     bed: "1 King Bed",
     capacity: "2 Tamu",
     price: 678600,
@@ -56,7 +55,7 @@ const rooms = [
     id: 3,
     name: "Deluxe Twin",
     type: "Deluxe",
-    // size: "24 m²",
+    size: "32 m²",
     bed: "2 Single Bed",
     capacity: "2 Tamu",
     price: 704700,
@@ -70,7 +69,7 @@ const rooms = [
     id: 4,
     name: "Grand Deluxe",
     type: "Deluxe",
-    // size: "24 m²",
+    size: "67 m²",
     bed: "1 King Bed",
     capacity: "2 Tamu",
     price: 704700,
@@ -84,7 +83,7 @@ const rooms = [
     id: 5,
     name: "Junior Suite",
     type: "Suite",
-    // size: "42 m²",
+    size: "62 m²",
     bed: "1 King Bed",
     capacity: "2 Tamu",
     price: 1740000,
@@ -107,7 +106,7 @@ const rooms = [
     id: 6,
     name: "President Suites",
     type: "Suite",
-    // size: "120 m²",
+    size: "135 m²",
     bed: "1 King Bed",
     capacity: "2 Tamu",
     price: 3567000,
@@ -131,7 +130,6 @@ const amenityIcons = {
   // "Living Area": Maximize2,
   Kitchenette: Coffee,
   "Balkoni": Maximize2,
-
 };
 
 const formatPrice = (price) => {

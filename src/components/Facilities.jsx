@@ -54,12 +54,12 @@ const facilities = [
     desc: 'Koneksi internet tersedia gratis di seluruh area hotel.',
     color: 'from-sky-500 to-blue-600',
   },
-  // {
-  //   icon: BellRing,
-  //   name: '24-Hour Service',
-  //   desc: 'Layanan kamar dan resepsionis tersedia sepanjang waktu untuk kenyamanan Anda.',
-  //   color: 'from-amber-600 to-yellow-600',
-  // },
+  {
+    icon: BellRing,
+    name: '24-Hour Service',
+    desc: 'Resepsionis tersedia sepanjang waktu untuk kenyamanan Anda.',
+    color: 'from-amber-600 to-yellow-600',
+  },
   {
     icon: Sparkles,
     name: 'Laundry Service',
