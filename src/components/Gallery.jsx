@@ -82,6 +82,13 @@ export default function Gallery() {
     });
   };
 
+  const hiddenClick = (idTarget) => {
+    const hiddenGallery = document.getElementById(idTarget || 'hidden_galerry');
+    if (hiddenGallery) {
+      hiddenGallery.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
   return (
     <>
       <section id="galeri" className="section-padding bg-white" ref={ref}>
@@ -178,8 +185,9 @@ export default function Gallery() {
                   transition={{ duration: 0.4 }}
                   className="group relative overflow-hidden rounded-xl cursor-pointer"
                   onClick={() => setShowAll(true)}
+                  id="show-all-card"
                 >
-                  <div className="aspect-square">
+                  <div className="aspect-square" id='hidden_galerry'>
                     <img
                       src={filteredItems[INITIAL_VISIBLE - 1]?.src}
                       alt="Lihat semua foto"
@@ -201,8 +209,11 @@ export default function Gallery() {
           {/* Tombol tampilkan lebih sedikit*/}
           {showAll && hasMore && (
             <div className="flex justify-center mt-8">
-              <button
-                onClick={() => setShowAll(false)}
+              <button 
+                onClick={() => {
+                  setShowAll(false);
+                  hiddenClick('galeri');
+                }}
                 className="mt-4 px-8 py-2 rounded-full text-sm font-medium bg-white text-slate-600 hover:bg-amber-50 hover:text-amber-700 border border-slate-200 transition-all duration-300"
               >
                 Tampilkan Lebih Sedikit

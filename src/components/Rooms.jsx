@@ -48,7 +48,7 @@ const rooms = [
     price: 678600,
     originalPrice: 780000,
     image: roomDeluxe,
-    amenities: ["AC", "WiFi", "Smart TV", "Sarapan", "Hot Shower"],
+    amenities: ["AC", "WiFi", "TV", "Sarapan", "Hot Shower"],
     description:
       "Kamar deluxe dengan tempat tidur king size yang luas dan nyaman. Interior elegan dengan sentuhan modern, sempurna untuk pasangan atau tamu eksekutif.",
   },
@@ -62,7 +62,7 @@ const rooms = [
     price: 704700,
     originalPrice: 810000,
     image: roomDeluxeTwin,
-    amenities: ["AC", "WiFi", "Smart TV", "Sarapan", "Hot Shower"],
+    amenities: ["AC", "WiFi", "TV", "Sarapan", "Hot Shower"],
     description:
       "Kamar deluxe luas dengan dua tempat tidur single. Ideal untuk tamu yang menginginkan kenyamanan ekstra dengan ruang yang lebih lega.",
   },
@@ -76,7 +76,7 @@ const rooms = [
     price: 704700,
     originalPrice: 810000,
     image: grandDeluxe,
-    amenities: ["AC", "WiFi", "Smart TV", "Sarapan", "Hot Shower"],
+    amenities: ["AC", "WiFi", "TV", "Sarapan", "Hot Shower"],
     description:
       "Kamar deluxe luas dengan dua tempat tidur single. Ideal untuk tamu yang menginginkan kenyamanan ekstra dengan ruang yang lebih lega.",
   },
@@ -86,7 +86,7 @@ const rooms = [
     type: "Suite",
     // size: "42 m²",
     bed: "1 King Bed",
-    capacity: "3 Tamu",
+    capacity: "2 Tamu",
     price: 1740000,
     originalPrice: 2000000,
     image: roomSuite,
@@ -108,7 +108,7 @@ const rooms = [
     type: "Suite",
     // size: "120 m²",
     bed: "1 King Bed",
-    capacity: "6 Tamu",
+    capacity: "2 Tamu",
     price: 3567000,
     originalPrice: 4100000,
     image: roomPresidenSuite,
@@ -116,29 +116,6 @@ const rooms = [
     description:
       "Pengalaman menginap premium dengan kamar yang lebih luas dan fasilitas lengkap termasuk bathtub dan minibar. Pemandangan kota yang menakjubkan.",
   },
-  // {
-  //   id: 7,
-  //   name: "Family Room",
-  //   type: "Family",
-  //   // size: "67 m²",
-  //   bed: "King + Twin",
-  //   capacity: "4 Tamu",
-  //   price: 2000000,
-  //   originalPrice: 2500000,
-  //   image: roomFamily,
-  //   amenities: [
-  //     "AC",
-  //     "WiFi",
-  //     "Smart TV",
-  //     "Sarapan",
-  //     "Bathtub",
-  //     "Minibar",
-  //     "Living Area",
-  //     "Kitchenette",
-  //   ],
-  //   description:
-  //     "Kamar keluarga terluas kami dengan ruang hidup yang nyaman. Dilengkapi tempat tidur king dan twin, sempurna untuk keluarga yang menginginkan pengalaman terbaik.",
-  // },
 ];
 
 const amenityIcons = {
