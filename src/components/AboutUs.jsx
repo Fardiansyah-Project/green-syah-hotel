@@ -15,7 +15,7 @@ const highlights = [
   {
     icon: Wifi,
     title: 'WiFi',
-    desc: 'Koneksi internet berkecepatan tinggi di seluruh area hotel.',
+    desc: 'Koneksi internet di seluruh area hotel.',
   },
   {
     icon: UtensilsCrossed,
