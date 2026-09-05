@@ -10,7 +10,7 @@ const highlights = [
   {
     icon: Clock,
     title: 'Layanan 24/7',
-    desc: 'Siap melayani kapan saja.',
+    desc: 'Resepsionis siap melayani kapan saja.'
   },
   {
     icon: Wifi,
